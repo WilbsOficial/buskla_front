@@ -1,0 +1,113 @@
+.container_categories {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.modal_categorys_loading {
+    width: 100vw;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 22.3vh;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.modal_categorys_loading img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.categories_contente {
+    /* width: 48.5em; */
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .8em;
+}
+
+.box_navbar {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.nav_category_title {
+    width: 100%;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav_category_title h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #555;
+}
+
+.nav_category_reload {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav_category_reload button {
+    width: 8.2em;
+    height: 3.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .03em solid #9dd685;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.nav_category_reload button:hover {
+    border: .03em solid #c6c6c6;
+    background-color: #c6c6c6;
+    color: #555;
+}
+
+.box_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media(min-width: 992px) {
+    .categories_contente {
+        padding: 0 3em;
+    }
+}
+
+@media(min-width: 1200px) {
+    .categories_contente {
+        padding: 0 8em;
+    }
+}
+
+@media(min-width: 1400px) {
+    .categories_contente {
+        width: 1200px;
+    }
+}

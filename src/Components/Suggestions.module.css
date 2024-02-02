@@ -1,0 +1,142 @@
+.box_banner_suggestions {
+    width: 100%;
+    /* height: 25.8em; */
+    max-height: 39em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    /* position: relative; */
+}
+
+.banner_intro {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.intro_title {
+    height: 3em;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner_section_black_title {
+    font-weight: 800;
+    font-size: 22px;
+    color: #383838;
+    height: 1.3em;
+}
+
+.intro_btn_back {
+    width: 4em;
+    height: 4em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 68.6em;
+    left: 2%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;  
+}
+
+.intro_btn_next {
+    width: 4em;
+    height: 4em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 68.6em;
+    right: 2%;
+    margin: 0;
+    padding: 0;
+    border: 0;   
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.intro_btn_back:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.intro_btn_next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.intro_btn_back i {
+    color: #fff;
+}
+
+.intro_btn_next i {
+    color: #fff;
+}
+
+.intro_btn_back i:hover {
+    color: #383838;
+}
+
+.intro_btn_next i:hover {
+    color: #383838;
+}
+
+.intro_carousel_area {
+    /* width: 100%; */
+    /* height: 20.8em; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* background-color: orange; */
+}
+
+@media(min-width: 1024px) {
+    .intro_btn_back {
+        display: flex;
+    }
+    
+    .intro_btn_next {
+        display: flex;
+    }
+}
+
+@media(min-width: 1200px) {
+    .intro_btn_back {
+        left: 7%; 
+    }
+    
+    .intro_btn_next {
+        right: 7%;
+    }
+}
+
+@media(min-width: 1317px) {
+    .intro_btn_back {
+        left: 6.5%; 
+    }
+    
+    .intro_btn_next {
+        right: 6.5%;
+    }
+}
+
+@media(min-width: 1400px) {
+    .intro_btn_back {
+        left: 5.9%; 
+    }
+    
+    .intro_btn_next {
+        right: 5.9%;
+    }
+}

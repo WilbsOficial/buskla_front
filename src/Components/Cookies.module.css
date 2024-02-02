@@ -1,0 +1,158 @@
+.box_cookies {
+    width: 38em;
+    height: 9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+	right: 2vw;
+	bottom: 2vh; 
+    /* border: .26em solid #c6c6c6; */
+    border: .23em solid #fff;
+    border-radius: .2em; 
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px;
+}
+
+.cookies_space {
+    width: 37em; 
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .box_cookies {
+        width: 100vw; 
+        height: 11em;
+        /* border-top: .26em solid #c6c6c6; */
+        border-bottom: 0;
+        border-right: 0;
+        right: 0;
+        bottom: 0; 
+    }   
+}
+
+@media (max-width: 576px) {
+    .cookies_space {
+        width: 28em;
+        height: 9em;
+    }   
+}
+
+@media (max-width: 410px) {
+    .cookies_space {
+        width: 23em;
+    }   
+}
+
+.cookies_space_title {
+    width: 13.7em;
+    height: 1.68em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .4em;
+}
+
+.cookies_space_title i {
+    transform: scale(var(--ggs,.8));
+}
+
+.cookies_space_title span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cookies_space_text {
+    width: 100%;
+    height: 3em;
+    margin-bottom: .8em;
+}
+
+.cookies_space_text p {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+    color: #555;
+    text-align: start;
+}
+
+.cookies_space_btns {
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.space_btns_link {
+    width: 5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btns_link {
+    transition: none;
+    margin: 0;
+    color: #0000EF;
+}
+
+.btns_link:hover {
+    color: #2B2BFF;
+}
+
+.space_btns_buttons {
+    width: 12em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button_no {
+    height: 100%;
+    width: 5.2em;
+    background-color: #fff; 
+    border: .19em solid #383838; 
+    border-radius: .2em;
+    color: #383838;
+}
+
+.button_no:hover {
+    background-color: #9dd685;
+    border: #9dd685;
+    cursor: pointer;
+}
+
+.button_yes {
+    height: 100%;
+    width: 5.2em;
+    background-color: #383838;
+    border: .19em solid #383838;
+    border-radius: .2em;
+    color: #fff;
+    font-weight: 600;
+} 
+
+.button_yes:hover {
+    background-color: #555;
+    border: #555;
+    cursor: pointer;
+} 
+
+@media (max-width: 576px) {
+    .space_btns_buttons {
+        width: 13em;
+    }  
+}
+
+
+@media (min-width: 576px) {
+    .cookies_space_text p {
+        font-size: 14px;
+    } 
+}

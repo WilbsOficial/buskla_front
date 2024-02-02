@@ -1,0 +1,181 @@
+.box_footer_at_home {
+    width: 100%;
+    max-height: 54.56em;
+    margin-top: 2em;
+}
+
+.back_top {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #383838;
+}
+
+.back_top_title {
+    width: 8.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #fff;
+}
+
+.back_top_title:hover {
+    color: rgb(205, 205, 205);
+}
+
+.back_top_title i {
+    margin-top: .3em;
+}
+
+.main_links {
+    width: 100%;
+    height: 13.2em;
+    /* background-color: #b4e37f; */
+    background-color: #9dd685;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area_links {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+}
+
+.links_group {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links_solo {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.links_a {
+    width: 7em;
+    color: #383838;
+    text-align: start;
+}
+
+.bureaucracy_links {
+    width: 100%;
+    height: 5.74em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #64cc5d;
+}
+
+.bureaucracy_group {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+}
+
+.bureaucracy_group_big {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bureaucracy_a {
+    color: #383838;
+}
+
+.bureaucracy_a_go {
+    width: 4.1em;
+    color: #383838;
+}
+
+.social_media {
+    width: 100%;
+    height: 7.30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.box_midias {
+    width: 15em;
+    height: 1.9em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box_midias a {
+    color: #333333;
+}
+
+.box_midias a:hover {
+    color: #555;
+}
+
+.line_media {
+    width: 100%;
+    /* height: 0.8em; */
+    position: relative;
+    top: 2.3em;
+    bottom: 0;
+    border-top: 1px solid #383838;
+}
+
+.media_i_size i {
+    transform: scale(var(--ggs,1.3));
+}
+
+.bottom_content {
+    width: 100%;
+    height: 4.95em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+}
+
+.bottom_content p {
+    color: #fff;
+    font-size: 12px;
+}
+
+@media(min-width: 576px) {
+    .main_links {
+        height: 12.2em;
+    }
+    
+    .links_a {
+        width: 12em;
+    }
+}
+
+@media(min-width: 768px) {
+    .area_links {
+        width: 40em;
+        margin-right: 10em;
+    }
+
+    .bureaucracy_group {
+        width: 50em;
+        flex-direction: unset;
+        height: 1.3em;
+    }
+
+    .bureaucracy_group_big {
+        width: 30em;
+    }
+}
