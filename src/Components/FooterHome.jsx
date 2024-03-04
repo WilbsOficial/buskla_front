@@ -21,6 +21,20 @@ const FooterHome = () => {
             <a className={styles.links_a} href="#a4">Ofertas Selecionadas</a>
             <a className={styles.links_a} href="#a2">Mais buscados</a>
           </div>
+          <div className={styles.links_group}>
+            <Link
+              className={styles.links_a}
+              to="/historic"
+            >
+              Histórico
+            </Link>
+            <Link
+              className={styles.links_a}
+              to="/alert"
+            >
+              Alertas
+            </Link>
+          </div>
           <div className={styles.links_solo}>
             <Link
               className={styles.links_a}

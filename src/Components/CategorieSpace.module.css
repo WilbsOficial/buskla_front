@@ -10,7 +10,7 @@
  
 .banner_intro {
     width: 90%;
-    height: 15em;
+    height: 15.2em;
     max-width: 768px;
     border: .1em solid #efefef;
     border-radius: 5px;
@@ -63,12 +63,16 @@
 }
 
 .intro_categorys {
-    height: 11em;
+    height: 11.2em;
     padding-left: .33em;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     /* background-color: yellow; */
+}
+
+.intro_categorys::-webkit-scrollbar {
+    display: none;
 }
 
 .categorys_segment {
@@ -98,10 +102,6 @@
     /* display: inline-block; */
 }
 
-.category_link:hover {
-    transform: translate(0, -5px);
-}
-
 .category_link span {
     width: 95%;
     color: #000;
@@ -118,5 +118,9 @@
 @media(min-width: 992px) {
     .title_sugestions_buttons {
         display: flex;
+    }
+
+    .category_link:hover {
+        transform: translate(0, -5px);
     }
 } 

@@ -251,7 +251,7 @@ const Search = () => {
           setFbTitle(optionsToChoose[0]);
           setFb(c3StorageNintendoSw);
           setFc([]);
-        } 
+        };
       } else if (pcategory === "d") {
         setFaTitle(optionsToChoose[4]);
         setFa(c4platform);
@@ -287,8 +287,8 @@ const Search = () => {
         setFa([]);
         setFb([]);
         setFc([]);
-      }
-    } 
+      };
+    };
   }, [pcategory, anuncio]); 
 
   const stores = useMemo(() => {
@@ -341,8 +341,8 @@ const Search = () => {
       setFiltExist(true);
     } else {
       setSelectedA(e);
-    } 
-  }
+    };
+  };
 
   const handleOnChangeOptionsB = (e) => {
     if (e === selectedB) {
@@ -350,8 +350,8 @@ const Search = () => {
       setFiltExist(true);
     } else {
       setSelectedB(e);
-    }
-  }
+    };
+  };
 
   const handleOnChangeOptionsC = (e) => {
     if (e === selectedC) {
@@ -359,8 +359,8 @@ const Search = () => {
       setFiltExist(true);
     } else {
       setSelectedC(e);      
-    }
-  }
+    };
+  };
 
   useEffect(() => {
     if ((checkedState !== undefined) && (checkedState !== null)) {

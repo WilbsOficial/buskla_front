@@ -1,0 +1,293 @@
+.container_list {
+    /* width: 65em; */
+    width: 100%;
+    max-width: 868px;
+    /* max-height: 50em; */
+    /* margin-left: 1.5em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.list_product {
+    width: 100%;
+    /* height: 15em; */
+    /* height: 16em; */
+    max-height: 50em;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* border: 1px solid #EFEFEF; */
+    border: 2px solid #9dd685;
+    border-radius: 5px;
+    /* margin-bottom: 1.5em; */
+    box-shadow: 0px 0px .8em rgba(0, 0, 0, .2);
+    text-decoration: none;
+    /* cursor: pointer; */
+    background-color: #fff;
+    /* background-color: red; */
+}
+
+.product_delete_box {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: .5em;
+}
+
+.notification_box {
+    width: 10em;
+    height: 70%;
+    margin-left: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efc44c;
+    color: #fff;
+    font-weight: 800;
+}
+
+.notification_box:hover {
+    background-color: #ead7a5;
+    color: #9e7606;
+    cursor: pointer;
+}
+
+.notification_box span {
+    margin-left: 1em;
+}
+
+.notification_box i { 
+
+
+animation: rotate 1s infinite linear;
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        /* transform: rotate(359deg); */
+        transform: rotate(40deg);
+      }
+}
+
+.product_delete_box button {
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 50%;
+    position: relative;
+    /* top: .5em; */
+    right: .5em;
+}
+
+.product_delete_box button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.product_name_box {
+    width: 100%;
+    height: 3.5em;
+    margin-top: .2em;
+}
+
+.name_box {
+    width: 90%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: .1em solid #c6c6c6;
+    background-color: #EFEFEF;
+    margin-left: .5em;
+    border-radius: 5px;
+}
+
+.name_box p {
+    max-width: 280px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: .5em;
+    color: #888383;
+}
+
+.price_box_now {
+    width: 100%;
+    /* height: 7em; */
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: .5em;
+    /* background-color: aqua; */
+}
+
+.p_problem{
+    /* color: #d32818; */
+    color: rgba(244, 19, 19, 0.62);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: justify;
+    margin-bottom: .5em;
+    margin-left: .5em;
+}
+
+.price_box_now p {
+    color: #888383;
+    font-weight: 600;
+    margin-left: .5em;
+    margin-bottom: .23em;
+}
+
+.price_box {
+    width: 14em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: .1em solid #c6c6c6;
+    background-color: #EFEFEF;
+    margin-left: .5em;
+    border-radius: 5px;
+}
+
+.price_box p {
+    font-size: 16px;
+    margin: 0;
+    margin-left: .5em;
+    padding: 0;
+    color: #256539;;
+}
+
+.product_price_box form {
+    width: 100%;
+    /* height: 5em; */
+    max-height: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: .5em;
+    /* background-color: rgb(177, 167, 47); */
+}
+
+.product_price_box form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: .5em;
+    color: #888383;
+    font-weight: 600;
+}
+
+.product_price_box form label input {
+    /* width: 14em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: .1em solid #c6c6c6;
+    background-color: #EFEFEF;
+    border-radius: 5px; */
+
+    width: 14em;
+    margin: 0;
+    padding: 0;
+    padding-left: 0px;
+    padding-left: .23em;
+    height: 3em;
+    outline: none;
+    border-radius: .50em;
+    border: .19em solid #c6c6c6;
+}
+
+.price_box_button {
+    width: 100%;
+    height: 4.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button_edit {
+    width: 7em;
+    height: 3em;
+    margin-right: .5em;
+    border-radius: 20px;
+    border: .03em solid #9dd685;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+}
+
+.button_edit:hover {
+    cursor: pointer;
+    border: .03em solid #c6c6c6;
+    background-color: #c6c6c6;
+    color: #555;
+}
+
+.button_save {
+    width: 7em;
+    height: 3em;
+    margin-right: .5em;
+    border-radius: 20px;
+    border: .03em solid #9dd685;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+}
+
+.button_save:hover {
+    cursor: pointer;
+    border: .03em solid #c6c6c6;
+    background-color: #7dc983;
+    color: #fff;
+}
+
+.button_cannot {
+    width: 7em;
+    height: 3em;
+    margin-right: .5em;
+    border-radius: 20px;
+    border: .03em solid #ec0c0c;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+}
+
+.button_cannot:hover {
+    cursor: pointer;
+    border: .03em solid #c6c6c6;
+    background-color: #d77272;
+    color: #fff;
+}
+
+@media(min-width: 682px) {
+    .name_box p {
+        max-width: 580px;
+    }
+}
+
+@media(min-width: 992px) {
+    .p_problem{
+        font-size: 14px;
+    }
+};

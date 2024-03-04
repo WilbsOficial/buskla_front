@@ -68,7 +68,7 @@ const CategorieSpace = ({showFix}) => {
                 </button>
               </div>
             </header>
-            <div className={styles.intro_categorys} ref={carousel}>
+            <div className={styles.intro_categorys} ref={carousel} scrolling="no">
               <div className={styles.categorys_segment}>
                 <Link
                   to={`/categories/${cn[0]}`}

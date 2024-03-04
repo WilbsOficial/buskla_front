@@ -1,11 +1,10 @@
-import styles from "./CardRa.module.css"; 
+import styles from "./CardProductList.module.css"; 
 import {Link} from "react-router-dom"; 
-import api from "../Services/api";
+// import api from "../Services/api";
 
-const CardRa = ({item}) => {
+const CardProductList = ({item}) => {
 
   async function handleIncrement(item) {
-    // Busca o valor do cookie historico
     function getCookie(name) {
       let cookie = {};
       document.cookie.split(';').forEach(function (el) {
@@ -17,11 +16,7 @@ const CardRa = ({item}) => {
     };
     const myCookie = getCookie("historico");
 
-    // Se o valor de historico for Sim entra no if
-    // Se o valor de historico nao for Sim acaba
     if (myCookie === "Sim") {
-
-      // Pegandoo valor dos cookies timehis e timehisName
       const cookieNameList = ["timehis", "timehisName"];
 
       let getValidate = [];
@@ -40,7 +35,6 @@ const CardRa = ({item}) => {
 
         getValidate.push(myCookieValue);
       };
-      // console.log("getValidate: ", getValidate);
 
       let timehisNumber = undefined;
 
@@ -51,23 +45,17 @@ const CardRa = ({item}) => {
         timehisNameNumber = parseInt(getValidate[1]) + 1;
       };
 
-      // Guarda os index dos cookies his que estao salvos
       let getAllHisIndex = [];
       
-      // Guarda o valor dos cookies
       let getValuesOfHis = [];  
 
       if (timehisNumber != undefined && timehisNameNumber != undefined) {
-        // console.log("getValidate[0] != undefined && getValidate[1] != undefined: ", "VERDADEIRO");
-        // Pegando o index dos cookies salvos
         for (let i = timehisNumber; i < timehisNameNumber; i++) {
           if (document.cookie.indexOf(`his${i}`) >= 0) {
             getAllHisIndex.push(i);
           };
         };
-        // console.log('getAllHis: ', getAllHisIndex);
-
-        // Pegando o valor de todos os cookies his que estao salvos e nao
+        
         for (let r = timehisNumber; r < timehisNameNumber; r++) {
           function getCookieValue(name) {
             let cookie = {};
@@ -83,17 +71,12 @@ const CardRa = ({item}) => {
           getValuesOfHis.push(myCookieValue);
         };
       } else {
-        // console.log("getValidate[0] != undefined && getValidate[1] != undefined: ", "FALSO");
-
-        // Pegando o index dos cookies salvos
         for (let i = 0; i < 15; i++) {
           if (document.cookie.indexOf(`his${i}`) >= 0) {
             getAllHisIndex.push(i);
           };
         };
-        // console.log('getAllHis: ', getAllHisIndex);
 
-        // Pegando o valor de todos os cookies his que estao salvos e nao
         for (let r = 0; r < 15; r++) {
           function getCookieValue(name) {
             let cookie = {};
@@ -110,39 +93,17 @@ const CardRa = ({item}) => {
         };
       };
 
-      // console.log("getValuesOfHis: ", getValuesOfHis);
-
-
-      // Verificando se o valor de algum cookie encontrado salvo eh igual ao titulo do card clicado 
       const hasEgual = getValuesOfHis.filter((ite) => ite === item._id);
 
-      // console.log('hasEgual: ', hasEgual);
-
-      // Se tiver algum cookie com valor igual ao title do card clicado passa o if e acaba
-      // Se nao tiver nem um cookie com valor igual ao title do card clicado entra no if
       if (hasEgual.length === 0) {
-
-        // Pegando todos os index de cookies e verificando qual eh o mair 
         const lastNumber = Math.max(...getAllHisIndex);
 
-        // console.log('lastNumber: ', lastNumber);
-
-        // Se nao tiver index o valor vai ser -1 entao cai no primeiro caso do if
-        // Se tiver index com valor entre 0 até 13 entao cai no segundo caso do if
-        // Se tiver index com valor igual a 14 entao cai no terceiro caso do if
         if (lastNumber === -Infinity) {
-          // Cria um cookie para guadar o id do card
-          // console.log('lastNumber === -Infinity: ', lastNumber === -Infinity)
           document.cookie = `his0=${item._id};expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
         } else if (lastNumber >= 0 && lastNumber <= 13) {
-          // Cria um cookie para guadar o id do card
-          // console.log('lastNumber >= 0 && lastNumber <= 13: ', lastNumber >= 0 && lastNumber <= 13)
           let hisName = lastNumber + 1;
           document.cookie = `his${hisName}=${item._id};expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
         } else if (lastNumber >= 14) {
-          // Buscando o valor do cookie timehis
-          // console.log("lastNumber === 14: ", lastNumber === 14)
-
           function getCookie(name) {
             let cookie = {};
             document.cookie.split(';').forEach(function (el) {
@@ -154,12 +115,7 @@ const CardRa = ({item}) => {
           };
           const myCookieTime = getCookie("timehis");
 
-          // Se timehis existir eh por que tem mais que 14 cookie salvos entao entra no caso 1
-          // Se timehis nao existir eh por que tem 14 cookie salvos entao cai no else
           if (myCookieTime) {
-            // console.log('existe...')
-
-            // Excluindo o antigo his e adiconando ao timeHis um novo valor 
             const forNum = parseInt(myCookieTime);
             const newNum = forNum + 1;
 
@@ -169,7 +125,6 @@ const CardRa = ({item}) => {
 
             document.cookie = `timehis=${newNum};expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
 
-            // Buscando o cookie timeHisName, atualizando o valor de his e excluindo e criando timehisName
             function getCookie(name) {
               let cookie = {};
               document.cookie.split(';').forEach(function (el) {
@@ -188,45 +143,64 @@ const CardRa = ({item}) => {
 
             document.cookie = `timehisName=${hisName};expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
           } else {
-            // console.log('naoooo existe...')
-
-            // deletando his 0
             document.cookie = `his0=;expires=Sun, 31 Dec 1995 23:59:59 GMT;SameSite=Lax`
-
-            // criando verificador para  
+ 
             document.cookie = `timehis=0;expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
 
-            // guardando numero do his 15 = 15 
             document.cookie = `timehisName=15;expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
 
-            // criando his 15 
             document.cookie = `his15=${item._id};expires=Mon, 4 Feb 2030 12:59:59 GMT;path=/;SameSite=Lax`
           };
         };
-
       };
     };
 
-    // await api.post(`/${item._id}`);
+    await api.post(`/${item._id}`);
   }; 
 
-  return ( 
+  return (
+    // <div className={styles.container_list}>
+    //   <Link 
+    //     // to={item.link}
+    //     // target="_blank"
+    //     className={styles.list_product}
+    //     // onClick={() => handleIncrement(item._id)}
+    //   >
+    //     <div className={styles.list_product_image}>
+    //       <img src="https://m.media-amazon.com/images/I/41dxVVHRNWL._AC_SX679_.jpg" />
+    //     </div>
+    //     <div className={styles.list_product_data}>
+    //       <div className={styles.product_data_title}>
+    //         <p>Controle DualSense - Branco </p>
+    //       </div> 
+    //       <div className={styles.product_data_price}>
+    //         <span>R$ 395,00</span>
+    //       </div>
+    //       <div className={styles.product_data_box_store}>
+    //         <figure className={styles.store_contente}>
+    //         <div className={styles.store_contente_img_area}>
+    //           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAsVBMVEUAhv8Ziv////8Ahf8AhP8Agf8AfP8Ai/8Af//q8v+myf/V5f/D2v/Q4v+gxf+Dtv8Ac//e6/8Abf/2+v9hpf++1/87lP9bov+uzv8AeP9+s/9rqf+00f/I3f+Zwf+Svf8pj/+/wpH/zQD/pAD/fwD/VwD/PQD/LgD/HTL/A2b/AJT/ALHtAMDUANG6AOKhAPKGAP50AP9fL/9KUv8Tt/8Aze4G18EL4JQQ6mQV9x4QxqCLDKF4AAAA8ElEQVQ4je2P2XLDIAxFQUgE8BLjpNiunYQm3fd9+/8Pq3DSmb71pdOnHISuGC4ChNjzf6BWHEZrrXga5EQaBRlhaNyfA0WQB2CBLHgfAOwSGtPmXVEmBx2CK2AK2ENpq9ZnQ2VLmOth0WVuNCwXfM5BFcD52nm/qrMSmqotar81DHkQdmphBmIG1vdcuBy4J2syKCkRozANRupDUXQxoNQxUFKVXqk4c6DAiYVMKl7zQIWo1PabO2WMpl3FNmRSSUfrzfHJ6dn5xeXV9c3t3f3D41MVnl9e394/Pkc/EQopJz+QfAMRGfPdb89fIH/hC6h0Dfn7LS2zAAAAAElFTkSuQmCC" />
+    //         </div>
+    //         <figcaption>Magazine Luiza</figcaption>
+    //         </figure>
+    //       </div>
+    //     </div>
+    //   </Link>
+    // </div>
     <>
-      <Link
+       <Link 
         to={`/product/${item._id}`}
-        // to={item.link}
-        // target="_blank"
+        className={styles.container_card_product_others}
         onClick={() => handleIncrement(item)}
-        className={styles.container_card_ra}
       >
-        <figure className={styles.card_ra_image}>
-          <img
+        <figure className={styles.card_product_others_image}>
+          <img 
             src={item.img}
             alt={item.title}
-          />
+          /> 
         </figure>
-        <div className={styles.card_ra_data}>
-          <div className={styles.ra_data_box}>
+        <div className={styles.card_product_others_data}>
+          <div className={styles.product_others_data_box}>
             <div className={styles.box_data_title}>
               <p>{item.title}</p>
             </div>
@@ -235,9 +209,8 @@ const CardRa = ({item}) => {
             </div>
             <figure className={styles.box_data_store}>
               <div className={styles.store_contente_img_area}>
-                <img
+                <img 
                   src={item.logo}
-                  alt={item.store}
                 />
               </div>
               <figcaption>{item.store}</figcaption>
@@ -249,4 +222,4 @@ const CardRa = ({item}) => {
   );
 };
 
-export default CardRa;
+export default CardProductList;

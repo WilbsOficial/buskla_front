@@ -1,0 +1,314 @@
+.modal_product_loading {
+    width: 100vw;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 22.3vh;
+    margin: 0; 
+    padding: 0;
+    /* background-color: #fff; */
+    /* background-color: #7d3333; */
+}
+
+.modal_product_loading img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.container_product {
+    max-height: 150em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .8em;
+}
+
+.product_card_area {
+    width: 100%;
+    height: 19em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.product_alert_area {
+    width: 100%;
+    height: 24em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: rgb(183, 60, 60); */
+}
+
+
+
+.product_area_box {
+    width: 100%;
+    max-width: 74em;
+    /* max-width: 69em; */
+    /* height: 23em; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .5em;
+    border: .1em solid #efefef;
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px; */
+    box-shadow: 0px 0px .4em rgba(0,0,0, .1);
+}
+
+.product_name_box {
+    width: 100%;
+    height: 3.5em;
+    margin-top: 1em;
+}
+
+.name_box {
+    width: 90%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: .1em solid #c6c6c6;
+    background-color: #EFEFEF;
+    /* margin-left: .5em; */
+    border-radius: 5px;
+}
+
+.name_box p {
+    max-width: 280px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: .5em;
+    color: #888383;
+}
+
+.product_area_box h1 {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+/* .product_area_box p {
+    color: #888383;
+    font-size: 12px;
+    text-align: justify;
+} */
+.p_normal {
+    /* color: #343a3d; */
+    color: #888383;
+    font-size: 12px;
+    text-align: justify;
+    margin-bottom: 1.5em;
+}
+
+.p_problem{
+    /* color: #d32818; */
+    color: rgba(244, 19, 19, 0.62);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: justify;
+    /* margin-bottom: 1.5em; */
+}
+
+.product_area_box form {
+    width: 100%;
+    height: 9.5em;
+    margin-top: 1.5em;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.product_area_box form label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5em;
+    color: #888383;
+    font-weight: 600;
+}
+
+.product_area_box form label input {
+    /* width: calc(100% - .40em); */
+    width: 14em;
+    margin: 0;
+    padding: 0;
+    padding-left: .23em;
+    /* width: 52em; */
+    height: 3em;
+    outline: none;
+    border-radius: .50em;
+    border: .19em solid #c6c6c6;
+}
+
+.product_area_box form :nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #888383;
+    font-weight: 600;
+    /* margin-bottom: 2em; */
+}
+
+.product_area_box form :nth-child(2) button {
+    width: 6em;
+    height: 3em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: .03em solid #9dd685;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+}
+
+.product_area_box form :nth-child(2) button:hover {
+    cursor: pointer;
+    border: .03em solid #c6c6c6;
+    background-color: #c6c6c6;
+    color: #555;
+}
+
+.product_graphic_area {
+    width: 100%;
+    /* height: 38em; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    margin-bottom: 1em; 
+    align-items: center;
+    /* justify-content: center;
+    
+    */
+} 
+
+.product_graphic_area header {
+    width: 100%;
+    max-width: 75em;
+    height: 4em;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.product_graphic_area header h2 {
+    font-weight: 800;
+    font-size: 22px;
+    color: #383838;
+    height: 1.3em;
+} 
+
+.product_others_stores_area {
+    width: 100%;
+    /* height: 18em; */
+    max-height: 70em;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(30, 165, 48); */
+    margin-bottom: 1em;
+    align-items: center;
+    /* justify-content: center;
+    align-items: center;
+    */
+} 
+
+.product_others_stores_area header {
+    width: 100%;
+    max-width: 75em;
+    height: 4em;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.product_others_stores_area header h2 {
+    font-weight: 800;
+    font-size: 22px;
+    color: #383838;
+    height: 1.3em;
+} 
+
+.cards_area {
+    width: 100%;
+    max-width: 75em;
+    /* height: 41.7em; */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* .product_area_box form :nth-child(3) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.product_area_box form :nth-child(3) button {
+    width: 6em;
+    height: 3em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: .03em solid #9dd685;
+    background-color: #fff;
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px .8em rgba(0,0,0, .2);
+}
+
+.product_area_box form :nth-child(3) button:hover {
+    cursor: pointer;
+    border: .03em solid #c6c6c6;
+    background-color: #c6c6c6;
+    color: #555;
+} */
+
+@media(min-width: 1024px) {
+    .product_area_box h1 {
+        font-size: 18px;
+    }
+    
+    .product_area_box p {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 992px) {
+    .container_product {
+        padding: 0 3em;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container_product {
+        padding: 0 8em;
+    }
+}
+
+/* @media(min-width: 1400px) {
+    .product_card_area {
+        width: 1200px;
+    }
+} */
+

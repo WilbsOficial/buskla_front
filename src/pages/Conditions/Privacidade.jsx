@@ -128,16 +128,19 @@ const Privacidade = () => {
                 <strong>Quando um usuário e visitante acessa páginas do site Busk!á.com: </strong>as informações 
                 sobre interação e acesso são coletadas pela plataforma para garantir uma melhor experiência 
                 ao usuário e visitante. Estes dados podem tratar sobre as 
-                palavras-chaves utilizadas em uma busca e visualizações de páginas
+                palavras-chaves utilizadas em uma busca, visualizações de páginas, histórico de navegação e produtos de interesse por meio de alertas.
               </p>
               <h3>3. Quais dados pessoais recolhemos sobre o usuário e visitante?</h3>
               <p className={styles.contente_paragraph_normal}>
                 Os dados pessoais do usuário e visitante recolhidos são os seguintes:
               </p>
               <ul className={styles.paragraph_ul_normal}>
-                <li className={styles.ul_normal_li}>
+                <li className={styles.ul_normal_li_bottom}>
                   <strong>Dados para otimização da navegação: </strong>acesso a páginas, 
                   palavras-chave utilizadas na busca e recomendações.
+                </li>
+                <li className={styles.ul_normal_li}>
+                  <strong>Dados para recursos de aleta e histórico: </strong>produtos de interesse por meio de alertas e histórico de navegação.
                 </li>
               </ul>
               <h3>4. Para que finalidade utilizamos os dados pessoais do usuário e visitante?</h3>
@@ -235,7 +238,7 @@ const Privacidade = () => {
               </p>
               <p className={styles.contente_paragraph_normal}>
                 O usuário, ao usar o site Busk!á.com, manifesta conhecer e pode exercitar seus direitos de cancelar sua confirmação 
-                de Cookies, acessar e atualizar seus dados pessoais e garante a veracidade das informações por ele disponibilizadas.
+                de Cookies e aceitamento de qualquer outro recurso, acessar e atualizar seus dados pessoais e garantir a veracidade das informações por ele disponibilizadas.
               </p>
               <p className={styles.contente_paragraph_normal}>
                 O usuário tem direito de retirar o seu consentimento a qualquer tempo, para tanto deve entrar em contato por meio 

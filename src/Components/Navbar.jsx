@@ -251,7 +251,7 @@ const Navbar = () => {
   };
 
   function handleCom(value) {
-    console.log('acessou...')
+    // console.log('acessou...')
     setValidar(false);
     setProduto(value.target.innerText);
 
@@ -268,6 +268,16 @@ const Navbar = () => {
     setName(value.target.innerText);
   };
 
+  // console.log("rec.length", rec.length);
+
+  // console.log(validar && rec > 0);
+
+  // console.log("validar && rec.length === 0 && showAgain.length > 0: ", validar && rec.length === 0 && showAgain.length > 0)
+
+  // console.log("validar && rec.length > 0 && showAgain.length === 0: ", validar && rec.length > 0 && showAgain.length === 0)
+
+  // console.log("validar && rec.length > 0 && showAgain.length > 0: ", validar && rec.length > 0 && showAgain.length > 0)
+
   useCreatCookie(name);  
 
   return (
@@ -278,16 +288,13 @@ const Navbar = () => {
             <h1 className={styles.brand}>BUSK!Á</h1>
           </NavLink>
           <div className={styles.nav_links}>
-            {/* <NavLink className={styles.links_a_time} to="/historic">
+            <NavLink className={styles.links_a_time} to="/historic">
               <i className="gg-time"></i>
               Histórico
             </NavLink>
             <NavLink className={styles.links_a_bell} to="/alert">
               <i className="gg-bell"></i>
               Alertas
-            </NavLink> */}
-            <NavLink className={styles.links_a_light_bulb} to="/sobre">
-              Conheça nosso objetivo
             </NavLink>
           </div>
         </div>
@@ -317,10 +324,9 @@ const Navbar = () => {
               <i className="gg-search"></i>
             </button>
           </form>
-          {produto.length >= 3 && validar && versionApp &&
+          {produto.length >= 3 && !validar && versionApp &&
             <div className={styles.space_render} ref={auto}>
               <div className={styles.autocomplete_space}>
-                <hr />
                 {rec.map((value) => (
                   <div
                     key={value.id}
@@ -388,7 +394,9 @@ const Navbar = () => {
           {produto.length >= 3 && validar && !versionApp &&
             <div className={styles.space_render} ref={auto}>
               <div className={styles.autocomplete_space}>
-                <hr />
+                {/* {validar && rec.length > 0 && showAgain.length === 0 && <hr />}
+                {validar && rec.length > 0 && showAgain.length > 0 && <hr />}
+                {validar && rec.length === 0 && showAgain.length > 0 && <hr />} */}
                 {rec.map((value) => (
                   <div
                     key={value.id}
@@ -421,16 +429,13 @@ const Navbar = () => {
           }
         </div>
         <div className={styles.nav_links}>
-          {/* <NavLink className={styles.links_a_time} to="/historic">
+          <NavLink className={styles.links_a_time} to="/historic">
             <i className="gg-time"></i>
             Histórico
           </NavLink>
           <NavLink className={styles.links_a_bell} to="/alert">
             <i className="gg-bell"></i>
             Alertas
-          </NavLink> */}
-          <NavLink className={styles.links_a_light_bulb} to="/sobre">
-            Conheça nosso objetivo
           </NavLink>
         </div>
       </div>

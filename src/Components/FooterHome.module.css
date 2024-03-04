@@ -32,9 +32,11 @@
 
 .main_links {
     width: 100%;
-    height: 13.2em;
+    /* height: 13.2em; */
+    height: 16.2em;
     /* background-color: #b4e37f; */
-    background-color: #9dd685;
+    /* background-color: #9dd685; */
+    background-color: #accf86;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +157,7 @@
 
 @media(min-width: 576px) {
     .main_links {
-        height: 12.2em;
+        height: 15.2em;
     }
     
     .links_a {

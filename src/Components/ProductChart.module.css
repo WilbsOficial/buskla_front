@@ -1,0 +1,17 @@
+.graphic_area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* height: 28em; */
+    /* background-color: blueviolet; */
+}
+
+.graphic_area canvas {
+    /* width: 800px; */
+    width: 100%;
+    max-width: 1052px;
+    max-height: 28em;
+    /* height: 100%; */
+    /* background-color: red; */
+}

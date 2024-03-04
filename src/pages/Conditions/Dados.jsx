@@ -223,7 +223,7 @@ const Dados = () => {
                   <tr>
                     <td className={styles.table_td_contente}>concordo</td>
                     <td className={styles.table_td_contente}>Cookie Persistente, expira em 3 meses</td>
-                    <td className={styles.table_td_contente}>Guarda a decisão (sim ou não) da permisão para usar Cookies</td>
+                    <td className={styles.table_td_contente}>Guarda a decisão (sim ou não) da permissão para usar Cookies</td>
                   </tr>
                   <tr>
                     <td className={styles.table_td_contente}>ktone</td>
@@ -262,6 +262,34 @@ const Dados = () => {
                     <td className={styles.table_td_contente}>
                       Verificar a existencia de ktthr, 
                       exclui-lo e o atualizar com nova palavra-chave
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.table_td_contente}>historico</td>
+                    <td className={styles.table_td_contente}>Cookie Persistente, expira em 04/02/2030</td>
+                    <td className={styles.table_td_contente}>
+                      Guarda a decisão (sim ou não) da permissão para o recurso de histórico
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.table_td_contente}>his0...x</td>
+                    <td className={styles.table_td_contente}>Cookie Persistente, expira em 04/02/2030</td>
+                    <td className={styles.table_td_contente}>
+                      Guarda o id único de um produto para o retornar em uma lista de histórico  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.table_td_contente}>lastAlert</td>
+                    <td className={styles.table_td_contente}>Cookie Persistente, expira em 04/02/2030</td>
+                    <td className={styles.table_td_contente}>
+                      Guarda o número de regitro do último alerta criado para dizer qual será o proximo   
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.table_td_contente}>alert1...x</td>
+                    <td className={styles.table_td_contente}>Cookie Persistente, expira em 04/02/2030</td>
+                    <td className={styles.table_td_contente}>
+                      Guarda o título de um produto, registro (para ordenar do mais antigo ao mais novo) e preço   
                     </td>
                   </tr>
                 </tbody>

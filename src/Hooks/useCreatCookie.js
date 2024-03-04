@@ -76,7 +76,7 @@ export const useCreatCookie = (value) => {
 
         const arr = ["ktone=", ";expires=Wed, 15 May 2030 23:59:59 GMT;path=/;SameSite=Lax"];
         var feito = valueck;
-          arr.splice(1, 0, feito);         
+          arr.splice(1, 0, feito);          
           var jogar = arr.join('');   
         document.cookie = jogar; 
                 

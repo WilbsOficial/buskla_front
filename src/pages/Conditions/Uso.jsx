@@ -200,7 +200,7 @@ const Uso = () => {
             <p className={styles.contente_paragraph_normal}>
               A estrutura do site, a marca Busk!á.com o seu logotipo, layouts do site, design de interface, ilustrações, 
               programas de computador, banco de dados e arquivos de transmissão e quaisquer outras informações e direitos 
-              de propriedade intellectual de cunho autoral do portador <span> CPF sob o nº ***.***.***-20</span>, 
+              de propriedade intelectual de cunho autoral do portador <span> CPF sob o nº ***.***.***-20</span>, 
               observados os termos da <strong> Lei da Propriedade Industrial (Lei nº 9.279/96)</strong>, 
               <strong> Lei de Direitos Autorais (Lei nº 9.610/98) </strong>
               e <strong> Lei do Software (Lei nº 9.609/98)</strong>, estão devidamente reservados.

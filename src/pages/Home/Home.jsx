@@ -6,6 +6,7 @@ import Ranking from "../../Components/Ranking";
 import Suggestions from "../../Components/Suggestions";
 import Ofertas from "../../Components/Ofertas";
 import FooterHome from "../../Components/FooterHome";
+
 // import { Link } from "react-router-dom";
 
 const Home = () => {
